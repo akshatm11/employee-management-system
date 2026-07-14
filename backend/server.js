@@ -13,7 +13,10 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://employee-management-system-lac-one.vercel.app',
+  ],
   credentials: true,
 }));
 app.use(express.json());
